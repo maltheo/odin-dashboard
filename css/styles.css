@@ -1,0 +1,195 @@
+@import "https://www.nerdfonts.com/assets/css/webfont.css";
+
+/* General reset and basic styles */
+:root {
+    --main-blue: #3b82f6; /* Use standard custom property */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Roboto, Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+    display: grid;
+    grid-template-areas:
+                        "sidebar header"
+                        "sidebar projects";
+    grid-template-columns: min-content 1fr;
+}
+
+ul {
+    list-style: none; /* Correct property to remove bullet points */
+}
+
+/* Sidebar styling */
+
+.sidebar {
+    grid-area: sidebar;
+    border-right: #3b82f6 solid 1px;
+}
+
+.sidebar-links {
+    display: grid;
+    /* font-size: 36px; */
+    grid-template-columns: 50px 200px;
+    grid-template-rows: 50px;
+}
+
+.icon-large {
+    font-size: 36px;
+}
+
+.sidebar-links>* {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    /* border: 2px solid black; */
+}
+
+.sidebar-links>i {
+    justify-content: center;
+}
+
+.side-links-main {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    border: 2px solid black;
+}
+
+.icon-small {
+    font-size: 16px;
+}
+
+/* Header styling */
+
+.header {
+    grid-area: header;
+    display: grid;
+    grid-template-rows: 50px 100px;
+    height: fit-content;
+    border-bottom: #3b82f6 solid 1px;
+}
+
+.header-top,
+.header-bottom,
+.header-top>div,
+.header-bottom>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.profile-search {
+    all: unset;
+    display: flex;
+    height: 30px;
+    width: clamp(450px, 1em, 800px);
+    border-radius: 15px;
+    background-color: #3b82f6;
+    padding-left: 10px;
+}
+
+/* Remove default button styles */
+.icon-button {
+    all: unset; /* Removes all default styling (background, border, padding, etc.) */
+    display: inline-flex; /* Ensures the button wraps the icon neatly */
+    align-items: center;  /* Centers the icon vertically */
+    justify-content: center; /* Centers the icon horizontally */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth hover effects */
+    padding: 10px;
+}
+
+/* Hover effect */
+.icon-button:hover {
+    color: white; /* Change icon color on hover */
+}
+
+/* Remove default button styles */
+.profile-button {
+    all: unset; /* Removes default button styles */
+    display: inline-block; /* Wraps the image neatly */
+    border-radius: 50%; /* Sets the corner radius for the button */
+    overflow: hidden; /* Ensures the image is clipped to the radius */
+    cursor: pointer; /* Adds pointer cursor for interactivity */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth interaction effects */
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+}
+
+.profile-button img {
+    display: block; /* Ensures no extra spacing around the image */
+    width: 100%; /* Makes the image fill the button */
+    height: auto; /* Maintains the aspect ratio */
+}
+
+/* Hover effect */
+.profile-button:hover {
+    transform: scale(1.05); /* Slightly scales up the button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow on hover */
+}
+
+/* Remove default button styles */
+.profile-button-big {
+    all: unset; /* Removes default button styles */
+    display: inline-block; /* Wraps the image neatly */
+    border-radius: 50%; /* Sets the corner radius for the button */
+    overflow: hidden; /* Ensures the image is clipped to the radius */
+    cursor: pointer; /* Adds pointer cursor for interactivity */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth interaction effects */
+    height: 75px;
+    width: 75px;
+    margin: 10px;
+}
+
+.profile-button-big img {
+    display: block; /* Ensures no extra spacing around the image */
+    width: 100%; /* Makes the image fill the button */
+    height: auto; /* Maintains the aspect ratio */
+}
+
+/* Hover effect */
+.profile-button-big:hover {
+    transform: scale(1.05); /* Slightly scales up the button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a shadow on hover */
+}
+
+.profile-name {
+    font-size: 20px;
+}
+
+/* Projects */
+
+.main {
+    display: grid;
+    height: auto;
+    grid-template-areas: 
+                        "projects announcements"
+                        "projects trending";
+    gap: 10px;
+    margin: 10px;
+}
+
+.main>div>p {
+    font-weight: bold;
+    font-size: larger;
+}
+
+.main>div {
+    display: grid;
+
+}
