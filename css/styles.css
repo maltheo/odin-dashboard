@@ -36,7 +36,8 @@ ul {
 
 .sidebar {
     grid-area: sidebar;
-    border-right: #3b82f6 solid 1px;
+    border-right: grey double 5px;
+    background-color: #f4f5f7;
 }
 
 .sidebar-links {
@@ -221,11 +222,21 @@ li {
 
 .announcements>div {
     border: #3b82f6 solid 1px;
+    border-radius: 15px;
     padding: 10px;
 }
 
+/* Introducing intermediate border */
 .announcements>div>div {
-    border: #3b82f6 solid 1px;
+    border-top: #3b82f6 solid 1px;
+}
+
+.announcements>div>div:first-child {
+    border-top: none;
+}
+
+.announcements>div>div:last-child {
+    border-bottom: none;
 }
 
 /* Text formatting */
@@ -234,7 +245,15 @@ h2 {
     padding-bottom: 5px;
 }
 
-.button {
+.buttons {
     display: flex;
     justify-content: end;
+}
+
+/* Card formatting */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
