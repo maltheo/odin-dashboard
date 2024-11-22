@@ -6,6 +6,7 @@
     --nasapunk-orange: #e06236;
     --nasapunk-white: #f4f5f7;
     --nasapunk-blue: #304c7a;
+    --nasapunk-red: #c72138;
 }
 
 * {
@@ -33,6 +34,23 @@ body {
 
 ul {
     list-style: none; /* Correct property to remove bullet points */
+}
+
+/* Custom link styling */
+
+a {
+    color: var(--nasapunk-blue);
+    text-decoration: none;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+a:visited {
+    color: var(--nasapunk-blue);
+}
+
+a:hover {
+    color: var(--nasapunk-red);
+    transform: scale(1.02);
 }
 
 /* Sidebar styling */
@@ -193,6 +211,7 @@ li {
     grid-template-areas: 
                         "projects announcements"
                         "projects trending";
+    grid-template-columns: 3fr 1fr;
     gap: 10px;
     margin: 10px;
 }
@@ -248,11 +267,12 @@ li {
 h2 {
     padding-top: 5px;
     padding-bottom: 5px;
+    font-weight: 500;
 }
 
 h3 {
-    font-size: 20px;
-    font-weight: 500;
+    font-size: 17px;
+    font-weight: 600;
     padding-top: 10px;
     padding-bottom: 10px;
 }
@@ -260,6 +280,10 @@ h3 {
 .buttons {
     display: flex;
     justify-content: end;
+}
+
+.details {
+    color: grey;
 }
 
 /* Card formatting */
